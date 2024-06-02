@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sase Games Home Page Official Sase Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Arka plan rengi */
+            color: #ffffff;
+        }   
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        header {
+            background-color: #000000; /* Arka plan rengi */
+            color: #ffffff;
+            padding: 10px 0; /* Padding'i azalt */
+            display: flex; 
+            justify-content: space-between; /* Uzaklaştırma ve yakınlaştırma yaparken içeriğin bozulmaması */
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 250px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0; /* link menüsünün default marginlerini kaldır */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: rgb(252, 252, 252);
+            text-decoration: none;
+            transition: color 0.3s ease; /* Geçiş efekti */
+        }
+
+        nav ul li a:hover {
+            color: rgb(255, 0, 0); /* Daha soluk renk */
+        }   
+
+        section {
+            padding: 20px 0; /* Section padding değerini azalttık */
+        }
+
+        h2 {
+            color: rgb(220,20,60);
+            margin-top: 0; /* Üstteki boşluğu kaldır */
+        }
+
+        .oyun-listesi {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center; /* Oyun listesini ortala */
+        }
+
+        .oyun {
+            width: calc(50% - 10px);
+            background-color: rgb(241, 241, 241);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center; /* İçeriği ortala */
+            color: #000000;
+        }
+
+        .oyun img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        ./* slider */ {
+            overflow: hidden;
+            width: 100; /* Ekran genişliğine tam olarak sığacak şekilde ayarla */
+            max-width: 3840px; /* Slider'ın maksimum genişliği, ekran genişliğine göre ayarlanabilir */
+            height: 1080px; /* Slider'ın yüksekliği */
+            margin: 0 auto 20px auto; /* Slider ile bölüm arasındaki boşluğu azalt */
+            position:relative; /* relative yap */
+        }
+
+        .slider-content {
+            display:list-item;
+            transition: transform 0.5s ease;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            display:flex; /* Resmi blok haline getir, ortalamak için gerekli */
+        }
+
+        footer {
+            background-color: rgb(220, 20, 60); /* Arka plan rengi */
+            color: #000000;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header style="background-image: url('arkaplan.svg'); background-size: cover; background-position: center;">
+        <div class="container">
+            <img src="sasesvg.svg" alt="SASE GAMES">
+            <nav>
+                <ul>
+                    <li><a href="#anasayfa">HOME</a></li>
+                    <li><a href="#oyunlar">GAMES</a></li>
+                    <li><a href="#hakkimizda">ABOUT US</a></li>
+                    <li><a href="#iletisim">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="slider">
+        <div class="slider-content">
+            <a href="#" class="slide">
+                <img src="slider1.svg" alt="Slider Image 1">
+            </a>
+            <a href="#" class="slide">
+                <!-- <img src="slider2.svg" alt="Slider Image 2"> -->
+            </a>
+            <a href="#" class="slide">
+                <!-- <img src="slider3.svg" alt="Slider Image 3"> -->
+            </a>
+        </div>
+    </div>
+
+    <section id="anasayfa" class="hidden">
+        <div class="container">
+            <h2>Infinite Darkness: Trilogy</h2>
+            <p>Karanlık Sırlar: Gizemli bir şekilde ortadan kaybolan insanların izini sürerken, eski sırlarla dolu labirentlerde kaybolun. Her adımda yeni bir gizem sizi bekliyor.
+                Bilinmeyen Tehdit: Kötülüğün gölgesinde, cesur bir kahraman olmaya hazır mısınız? Zorlu bulmacaları çözün, karanlığın kalbine doğru ilerleyin ve dünyayı kurtaracak gücü bulun.
+                Son Karşılaşma: Büyük final yaklaşıyor! Kaderinizi belirleyecek kararları verin ve sonsuz karanlığın derinliklerindeki sırları açığa çıkarın. Her seçiminiz, yeni bir yolun kapısını açacak.
+                Hazır mısınız? Maceranın başlangıcı sizin seçiminizdir. "Infinite Darkness: Trilogy", sizi gerilim dolu bir yolculuğa davet ediyor. Gözlerinizi kapatın ve karanlığın içinde kaybolun.</p>
+        </div>
+    </section>
+
+    <section id="oyunlar" class="hidden">
+        <div class="container">
+            <h2>MACERAYA KATILIN!</h2>
+            <div class="oyun-listesi">
+                <div class="oyun">
+                    <img src="oyun1.jpg" alt="Oyun 1">
+                    <h3>Shadow Souls The Hunting</h3>
+                    <p>"Shadowed Souls: The Haunting", karanlık ve gizem dolu bir maceraya hazır olun! Bu oyun, cesur bir kahramanın, karanlık bir malikanenin derinliklerindeki sırları çözmek için verdiği mücadeleyi konu alıyor. Eski bir hayalet avcısı olarak, oyuncular, labirent gibi koridorlarda gezinirken karşılarına çıkan gizemli olayları araştıracak ve unutulmuş karanlık geçmişin perdesini aralayacaklar. Ancak dikkatli olun, zira her köşede tehlike ve ürpertici sürprizler sizi bekliyor olacak. Shadowed Souls: The Haunting, derinlemesine bir hikaye, atmosferik bir ortam ve sürükleyici oyun mekanikleriyle sizi korku dolu bir yolculuğa çıkaracak. Hazır mısınız, cesaretinizi test etmek için karanlıkta kaybolmaya?</p>
+                </div>
+                <div class="oyun">
+                    <img src="oyun2.jpg" alt="Oyun 2">
+                    <h3>Midnight Descent: Chronicles of Fear</h3>
+                    <p>"Midnight Descent: Chronicles of Fear" ile kabuslarla dolu bir dünyaya adım atın! Bu gerilim dolu oyunda, oyuncular, kaybolan bir arkadaşlarını bulmak için ürkütücü bir kasabaya doğru yolculuğa çıkarlar. Kasabanın karanlık sokaklarında ve terkedilmiş binalarında dolaşırken, geçmişin karanlık sırlarını ve lanetli hikayelerini keşfedecekler. Oyuncular, karşılaştıkları ipuçlarını birleştirerek korkunç olayların arkasındaki gerçeği açığa çıkaracak ve kendi hayatta kalma mücadelelerini verecekler. Midnight Descent: Chronicles of Fear, atmosferik grafikleri, tüyler ürpertici ses efektleri ve derinlemesine anlatımıyla korku severleri ekran başına kilitleyecek. Cesaretinizi toplayın, çünkü bu oyunda her köşe başında dehşet verici bir sürpriz sizi bekliyor!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hakkimizda" class="hidden">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <p>SASE Games: Oyun Tutkusuyla Geleceği Şekillendirme SASE Games, 2023 yılında oyun tutkunu bir grup geliştirici tarafından kurulmuştur. Kuruluşumuz, oyuncuların heyecanını ve merakını tatmin eden yaratıcı, yenilikçi ve eğlenceli oyunlar üretmek için bir araya gelmiştir. Amacımız, dünya çapında oyun endüstrisine katkıda bulunmak ve oyunculara unutulmaz deneyimler sunmaktır. Sahip olduğumuz tutku ve yeteneklerle, her bir projede özgün bir dokunuş ve benzersiz bir tarz yaratmayı hedefliyoruz. SASE Games olarak, sadece eğlenceye odaklanmıyoruz; aynı zamanda topluma ve çevreye de değer katmayı önemsiyoruz. Sosyal sorumluluk bilinciyle, projelerimizi etik ve sürdürülebilir bir şekilde yönetiyor, toplumsal fayda sağlayacak çalışmalara destek veriyoruz. Ekibimiz, çeşitli uzmanlık alanlarından gelen deneyimli ve tutkulu profesyonellerden oluşmaktadır. Oyun geliştirme sürecinin her aşamasında kaliteye ve yeniliğe odaklanarak, kullanıcıların beklentilerini aşacak ürünler sunmayı amaçlıyoruz. SASE Games olarak, gelecekteki projelerimizle oyun endüstrisinde adımızı daha da ileriye taşımak ve oyuncularla bağlarımızı güçlendirmek için sabırsızlanıyoruz. Bize katılın ve bizimle birlikte oyun dünyasının heyecan verici yolculuğuna katılın.</p>
+        </div>
+    </section>
+
+    <section id="iletisim" class="hidden">
+        <div class="container">
+            <h2>İletişim</h2>
+            <p>Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p>
+            <p>Email: info@sasegames.com</p>
+            <p>Telefon: +90 555 555 55 55</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 SASEGAMES. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+
+        
+        
+
+       /*  // Slider
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.opacity = i === index ? 1 : 0;
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 3000); // 3 saniyede bir slider geçişi */
+
+        // Scroll Animasyonu
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.hidden');
+            const windowHeight = window.innerHeight;
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
